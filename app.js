@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose');
-const urlDB = 'mongodb://Usermean:Barcelona@ds235877.mlab.com:35877/mean_todo_app';
+const urlDB = 'mongodb://<dbuser>:<dbpassword>@ds141024.mlab.com:41024/<dataBase>';
 
 
 //Connect to mongoose
