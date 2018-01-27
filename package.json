@@ -4,12 +4,13 @@
   "description": "Simple bookstore app",
   "main": "app.js",
   "scripts": {
+    "start": "mpde app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "*",
-    "body-parser": "*",
-    "mongoose": "*"
+    "express": "",
+    "body-parser": "",
+    "mongoose": ""
   },
   "keywords": [],
   "author": "Bez@el",

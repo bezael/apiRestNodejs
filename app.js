@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3300;
+
 const bodyParser = require('body-parser');
 
 
@@ -8,7 +9,9 @@ app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose');
-const urlDB = 'mongodb://<dbuser>:<dbpassword>@ds141024.mlab.com:41024/<dataBase>';
+const urlDB = 'mongodb://Usermean:Barcelona@ds235877.mlab.com:35877/mean_todo_app';
+
+
 //Connect to mongoose
 mongoose.connect(urlDB);
 let db = mongoose.connection;
@@ -125,10 +128,12 @@ app.delete('/api/books/:_id', (req, res)=>{
 //  NOT TODOS PUEDES BORRAR, SOLO EL ADMIN
 //  SOLO LOS USER, PUEDEN AÑADIR BOOKS
 //  
-app.listen(PORT, ()=> console.log(`Running on port ${PORT}`));	
+// app.listen(PORT, ()=> console.log(`Running on port ${PORT}`));	
 
 
-
+app.listen(PORT, function() {
+    console.log("App is running on PORT " + PORT);
+});
 
 
 
