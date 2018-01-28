@@ -5,11 +5,24 @@ const PORT = process.env.PORT || 3300;
 const bodyParser = require('body-parser');
 
 
-app.use(bodyParser.json());
+// Add headers
+app.use(bodyParser.json(), function (req, res) {
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+});
+
+// app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose');
-const urlDB = 'mongodb://<dbuser>:<dbpassword>@ds141024.mlab.com:41024/<dataBase>';
+const urlDB = 'mongodb://Usermean:Barcelona@ds235877.mlab.com:35877/mean_todo_app';
 
 
 //Connect to mongoose
