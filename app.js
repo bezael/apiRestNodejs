@@ -17,12 +17,10 @@ app.use(bodyParser.json(), function (req, res) {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 });
-
 // app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose');
-const urlDB = 'mongodb://Usermean:Barcelona@ds235877.mlab.com:35877/mean_todo_app';
 
 
 //Connect to mongoose
